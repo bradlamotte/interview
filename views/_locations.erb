@@ -1,0 +1,19 @@
+<div class="locations">
+
+  <div class="location-headers visible-md visible-lg">
+    <div class="row">
+      <div class="col-md-3">
+        <h4>Coordinates</h4>
+      </div>
+      <div class="col-md-6">
+        <h4>Address</h4>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+  <% addresses.map do |address| %>
+    <%= erb :_location, locals: { address: address } %>
+  <% end %>
+
+</div>

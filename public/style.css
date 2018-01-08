@@ -1,4 +1,35 @@
-/* custom CSS goes here */
+.navbar{
+  min-height: 120px;
+  background-color: #333333;
+}
+
+.page-header{
+  margin-top: 0px;
+}
+
+.location{
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-top: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.location-label{
+  font-weight: bold;
+}
+
+.location .row div[class^="col-"] .location-label {
+  margin-top: 15px;
+  @media (min-width: 0px) {
+    margin-top: 0px;
+  }
+}
+
+.location .row div:first-child[class^="col-"] .location-label {
+  margin-top: 0px;
+}
 
 .p25 {
     padding: 25px;
