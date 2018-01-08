@@ -6,4 +6,26 @@
       </h1>
     </div>
   </div>
+
+  Addresses:
+  <br/>
+
+  <table border="1">
+  <thead>
+    <tr>
+      <th>Coordinates</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <% addresses.map do |address| %>
+      <tr>
+        <td><%= address.lat %>, <%= address.lng %></td>
+        <td><%= address.full_address %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+  </table>
 </div>

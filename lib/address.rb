@@ -8,7 +8,7 @@ class Address
     search = Geocoder.search(full_address)
     location = search[0]
 
-    if location.class.name.deconstantize == 'Geocoder::Result'
+    if location.class.name == 'Geocoder::Result::GeocoderCa'
       self.lng = location.coordinates[1]
       self.lat = location.coordinates[0]
     end
@@ -18,7 +18,7 @@ class Address
     search = Geocoder.search("#{lat},#{lng}")
     location = search[0]
 
-    if location.class.name.deconstantize == 'Geocoder::Result'
+    if location.class.name == 'Geocoder::Result::GeocoderCa'
       self.full_address = location.address
     end
   end
