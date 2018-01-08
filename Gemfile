@@ -6,6 +6,7 @@ gem 'geocoder'
 gem 'faker'
 gem 'factory_girl'
 gem 'pry-byebug'
+gem 'sinatra-contrib'
 
 group :test do
   gem 'rspec'
