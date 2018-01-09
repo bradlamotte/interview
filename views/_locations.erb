@@ -8,11 +8,13 @@
       <div class="col-md-6">
         <h4>Address</h4>
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <h4>Distance to WH</h4>
+      </div>
     </div>
   </div>
 
-  <% addresses.map do |address| %>
+  <% addresses.sort_by { |address| address.distance }.map do |address| %>
     <%= erb :_location, locals: { address: address } %>
   <% end %>
 

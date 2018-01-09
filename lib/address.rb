@@ -2,7 +2,7 @@
 require_relative 'geocoding'
 
 class Address
-  attr_accessor :lat, :lng, :full_address
+  attr_accessor :lat, :lng, :full_address, :distance
 
   def geocode
     search = Geocoder.search(full_address)
@@ -24,7 +24,11 @@ class Address
   end
 
   def distance_between _coordinates
-    Geocoder::Calculations.distance_between(coordinates, _coordinates)
+    Geocoder::Calculations.distance_between(coordinates, _coordinates).to_i
+  end
+
+  def set_distance_between _coordinates
+    self.distance = distance_between _coordinates
   end
 
   def coordinates
